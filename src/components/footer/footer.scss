@@ -1,0 +1,22 @@
+$bgColor: #fff;
+
+footer{
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    background: $bgColor;
+    p{
+        margin: 0;
+        // padding: 15px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    footer{
+        p{
+            margin: 0;
+            padding-top: 25px;
+            font-size: .7em;
+        }
+    }
+}

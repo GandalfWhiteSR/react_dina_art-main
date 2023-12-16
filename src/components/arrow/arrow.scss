@@ -1,0 +1,46 @@
+#arrow{
+    position: absolute;
+    right: 350px;
+    bottom: 30px;
+    ion-icon {
+        font-size: 2em;
+        animation-name: floating;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    &.hide{
+        animation-name: fadeout;
+        animation-duration: .7s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards; 
+    }
+    &.show{
+        animation-name: fadein;
+        animation-duration: .3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards; 
+    }
+}
+@keyframes floating{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(-10px);}
+    100%{transform: translateY(0);}
+}
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+    // to   { opacity: 0; display: none; visibility: hidden;}
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+    // to   { opacity: 1; display: block; visibility: visible;}
+}
+
+@media screen and (max-width: 1024px){
+    #arrow{
+        display: none;
+        visibility: hidden;
+    }
+}

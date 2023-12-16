@@ -1,0 +1,86 @@
+$bgColor: #fff;
+$textColor: #4c4c4c;
+$textColorDarkMode: #b3b3b3;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent; // get rid of stupid bg color when click on
+    // user-select: none;
+    // pointer-events: none;
+}
+// THAT BITCH DON'T WANT TO WORK FAST!!!
+html{
+    background: $bgColor;
+    transition: filter .3s ease, background-color .3s ease;
+}
+html.dark-mode{
+    background-color: black;
+}
+body{
+    padding: 0 300px;
+    background-color: $bgColor;
+    transition: filter .3s ease, background-color .3s ease;
+    cursor: default;
+    color: $textColor;
+    font-family: sans-serif;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+        height: 0;
+        display: none;
+        background: transparent;
+    }
+}
+main{
+    // margin-top: 100px;
+    padding-top: 100px;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hydrated{
+    transition: filter .3s ease, background-color .3s ease;
+}
+.dark-mode{
+    filter: invert(1) hue-rotate(180deg);
+    .inverted{
+        filter: invert(1) hue-rotate(180deg);
+        border-color: $textColorDarkMode;
+    }
+}
+.bg-line{
+    position: relative;
+    width: 100%;
+    border-top: solid $textColor;
+    &.first{
+        transform: translateY(200px);
+        width: 85%;
+    }
+    &.second{
+        transform: translateY(110px);
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    body{
+        padding: 0;
+    }
+    main{
+        // margin-top: 100px;
+        padding-top: 100px;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}

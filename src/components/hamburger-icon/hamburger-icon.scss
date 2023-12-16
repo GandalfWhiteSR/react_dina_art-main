@@ -1,0 +1,47 @@
+$textColor: #4c4c4c;
+
+.hamburger{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 88px;
+    width: 40px;
+    margin: 0 50px;
+    padding: 2.7vh 0;
+    cursor: pointer;
+    z-index: 2;
+    .line1, .line2, .line3{
+        background: $textColor;
+        width: 40px;
+        height: 3px;
+        border-radius: 2.5px;
+        transition: all 0.4s ease-out;
+    }
+    .line1.X{
+        position: absolute;
+        transform: rotate(-405deg) translate3d(0, 50%, 0);
+        bottom: 50%;
+        width: 53px;
+    }
+    .line2.X{
+        position: absolute;
+        transform: rotate(-360deg) translate3d(0, 50%, 0);
+        opacity: 0;
+    }
+    .line3.X{
+        position: absolute;
+        transform: rotate(-315deg) translate3d(0, -50%, 0);
+        top: 50%;
+        width: 53px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .hamburger{
+        display: flex;
+    }
+}

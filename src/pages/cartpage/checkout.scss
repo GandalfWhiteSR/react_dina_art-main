@@ -1,0 +1,34 @@
+.purchase-section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    p{
+        margin: 25px;
+        padding: 10px;
+    }
+    .purchase{
+        margin: 25px;
+    }
+}
+.test-warning{
+    color: red;
+}
+
+@media screen and (max-width: 1024px){
+    .purchase-section{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        p{
+            margin: 25px;
+            padding: 10px;
+        }
+        .purchase{
+            margin: 25px;
+        }
+    }
+}
