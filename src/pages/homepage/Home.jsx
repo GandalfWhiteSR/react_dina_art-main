@@ -8,14 +8,14 @@ const Home = () => {
             <p>Welcome to Dina's Canvas Art studio.</p>
             <div className="bg-line first"></div>
             <div className="portrets">
-                <img className="inverted" src="img/portret_1.jpg" alt="" />
-                <img className="inverted" src={"img/portret_3.jpg"} alt="" />
-                <img className="inverted" src={process.env.PUBLIC_URL + "img/portret_2.jpg"} alt="" />
+                <img className="inverted" src="img/portret_1.jpg" alt="portrait_1" />
+                <img className="inverted" src="img/portret_3.jpg" alt="portrait_3" />
+                <img className="inverted" src="img/portret_2.jpg" alt="portrait_2" />
             </div>
             <Arrow />
             <p>I make an Abstract art! <br />
-            All of them are exclusive, because I use an unique technique and therefore each one is different.<br />
-            I use linen canvas with a stretcher. They are look great in offices, as well as in any other interior.</p>
+                All of them are exclusive, because I use an unique technique and therefore each one is different.<br />
+                I use linen canvas with a stretcher. They are look great in offices, as well as in any other interior.</p>
             <div className="bg-line first"></div>
             <div className="squares">
                 <img className="inverted" src="img/square_3.jpg" alt="" />

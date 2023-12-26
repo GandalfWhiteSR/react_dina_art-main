@@ -17,7 +17,7 @@ const Arrow = () => {
     }, [showArrow]);
 
     return (
-        <div id="arrow" className={`${showArrow ? "show" : "hide"}`}><ion-icon name="chevron-down-circle-outline"></ion-icon></div>
+        <div data-testid="arrow" id="arrow" className={`${showArrow ? "show" : "hide"}`}><ion-icon name="chevron-down-circle-outline"></ion-icon></div>
     );
 };
 

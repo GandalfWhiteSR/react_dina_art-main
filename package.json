@@ -23,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
+    "test": "jest --no-cache --env=jsdom",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -45,9 +45,41 @@
     ]
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.23.3"
+    "@babel/core": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "@babel/preset-react": "^7.23.3",
+    "babel-jest": "^29.7.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.5.1",
+    "jest-transform-stub": "^2.0.0",
+    "jsdom": "^23.0.1",
+    "postcss": "^8.4.32",
+    "redux-mock-store": "^1.5.4",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2"
   },
   "plugins": [
     "@babel/plugin-syntax-jsx"
-  ]
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ],
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest",
+      "^.+\\.scss$": "jest-transform-stub"
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy"
+    }
+  }
 }
